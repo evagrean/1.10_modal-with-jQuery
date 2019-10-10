@@ -33,6 +33,7 @@ var pokemonRepository = (function(){
     });
   }
 
+  // function which loads details about pokemon that are later displayed in modal
   function loadDetails(item) {
     var $url = item.detailsUrl;
     return $.ajax($url).then(function(details) {
@@ -58,10 +59,9 @@ var pokemonRepository = (function(){
     });
   }
 
-  //showDetails function shows pokemon's details after clicking on pokemons name
+  //showDetails function shows pokemon's details in a modal after clicking on pokemons name
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
-
       // creating Bootstrap's modal
       var $modalContainer = $('#modal-container');
       var $modal = $('<div class="modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-name" aria-hidden="true">');
@@ -75,7 +75,7 @@ var pokemonRepository = (function(){
       var $primaryButton = $('<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>');
 
       // creating elements for displaying content
-      var $nameElement = $('.modal-title').text(item.name[0].toUpperCase()+item.name.slice(1));
+      var $nameElement = $modalTitle.text(item.name[0].toUpperCase()+item.name.slice(1));
       var $imageElement = $('<img class="pokemon-img" alt="a picture of current pokemon">').attr('src', item.imageUrl);
       var $heightElement = $('<p class="pokemon-height"></p>').text('Height: ' + item.height);
       var $typesElement = $('<p class="pokemon-types"></p>').text('Types: ' + item.types);
@@ -120,10 +120,13 @@ pokemonRepository.loadList().then(function() {
   });
 });
 
+
+
+// function for filter/search pokemon list by name
 $(document).ready(function(){
-  $('#pokemon-search').on('keyup', function(){
+  $('#pokemon-search').on('keyup', function() {
     var value = $(this).val().toLowerCase();
-    $('.pokemon-list_item').filter(function(){
+    $('.list-group-item').filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
@@ -131,7 +134,7 @@ $(document).ready(function(){
 
 // reset content of modal after closing
 $(document).ready(function() {
-  $(".modal").on("hidden.bs.modal", function() {
+  $("#modal-container").on("hidden.bs.modal", function() {
     $(".modal-title").empty();
     $(".modal-body").empty();
   });
