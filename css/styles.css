@@ -1,0 +1,31 @@
+/* Colors used
+font-color: #2D3657;
+
+
+*/
+
+
+body {
+  font-family: 'Manjari', sans-serif;
+  font-size: 20px;
+
+}
+
+h1 {
+  color: #2D3657;
+  font-weight: bold;
+}
+
+
+.pokemon-list {
+  margin-top: 80px;
+}
+
+.list-group-item {
+  color: #2D3657;
+}
+
+.modal-dialog {
+  color: #2D3657;
+  text-align: center;
+}
