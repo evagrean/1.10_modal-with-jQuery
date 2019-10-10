@@ -135,9 +135,7 @@ $(document).ready(function(){
 // reset content of modal after closing
 $(document).ready(function() {
   $(".modal").on("hidden.bs.modal", function() {
-    var modalTitle = $('.modal-title');
-    var modalBody = $('.modal-body');
-    $modalTitle.empty();
-    $modalBody.empty();
+    $('.modal-title').empty();
+    $('.modal-body').empty();
   });
 });
