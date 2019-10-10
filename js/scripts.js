@@ -65,14 +65,14 @@ var pokemonRepository = (function(){
       // creating Bootstrap's modal
       var $modalContainer = $('#modal-container');
       var $modal = $('<div class="modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-name" aria-hidden="true">');
-      // var $modalDialog = $('<div class="modal-dialog" role="document"></div>');
-      // var $modalContent = $('<div class="modal-content"></div>');
-      // var $modalHeader = $('<div class="modal-header"></div>');
-      // var $modalTitle = $('<h5 class="modal-title" id="pokemon-name"></h5>');
-      // var $closeButton = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
-      // var $modalBody = $('<div class="modal-body"></div>');
-      // var $modalFooter = $('<div class="modal-footer"></div');
-      // var $primaryButton = $('<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>');
+      var $modalDialog = $('<div class="modal-dialog" role="document"></div>');
+      var $modalContent = $('<div class="modal-content"></div>');
+      var $modalHeader = $('<div class="modal-header"></div>');
+      var $modalTitle = $('<h5 class="modal-title" id="pokemon-name"></h5>');
+      var $closeButton = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+      var $modalBody = $('<div class="modal-body"></div>');
+      var $modalFooter = $('<div class="modal-footer"></div');
+      var $primaryButton = $('<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>');
 
       // creating elements for displaying content
       var $nameElement = $modalTitle.text(item.name[0].toUpperCase()+item.name.slice(1));
@@ -90,7 +90,7 @@ var pokemonRepository = (function(){
       $modalFooter.append($primaryButton);
 
       $modalHeader.append($modalTitle);
-      // $modalHeader.append($closeButton);
+      $modalHeader.append($closeButton);
 
 
       $modalContent.append($modalHeader);
