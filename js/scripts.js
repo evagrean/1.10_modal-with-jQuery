@@ -52,7 +52,7 @@ var pokemonRepository = (function(){
   //created list with buttons that have pokemons' names on it
   function addListItem(pokemon) {
     var $pokelist = $('.pokemon-list');
-    var $listItem = $('<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"></button>').text(pokemon.name[0].toUpperCase()+pokemon.name.slice(1));
+    var $listItem = $('<button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target=".modal"></button>').text(pokemon.name[0].toUpperCase()+pokemon.name.slice(1));
     $pokelist.append($listItem);
     $listItem.on('click', function(event) {
       showDetails(pokemon);
