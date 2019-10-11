@@ -72,7 +72,7 @@ var pokemonRepository = (function(){
       var $closeButton = $('<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
       var $modalBody = $('<div class="modal-body"></div>');
       var $modalFooter = $('<div class="modal-footer"></div');
-      var $primaryButton = $('<button type="button" class="btn btn-primary modal-close" data-dismiss="modal">Close</button>');
+      var $primaryButton = $('<button type="button" class="btn btn-info modal-close" data-dismiss="modal">Close</button>');
 
       // creating elements for displaying content
       var $nameElement = $modalTitle.text(item.name[0].toUpperCase()+item.name.slice(1));
