@@ -104,6 +104,7 @@ var pokemonRepository = (function(){
         $('.modal-backdrop').remove();
         $modalContainer.empty();
       });
+      $('body').removeClass('modal-open');
   }
 
   return {
