@@ -103,8 +103,9 @@ var pokemonRepository = (function(){
       $('.modal-close').click(function() {
         $('.modal-backdrop').remove();
         $modalContainer.empty();
+        $('body').removeClass('modal-open');
       });
-      $('body').removeClass('modal-open');
+
   }
 
   return {
