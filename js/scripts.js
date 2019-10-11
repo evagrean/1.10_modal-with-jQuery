@@ -69,10 +69,10 @@ var pokemonRepository = (function(){
       var $modalContent = $('<div class="modal-content"></div>');
       var $modalHeader = $('<div class="modal-header"></div>');
       var $modalTitle = $('<h5 class="modal-title" id="pokemon-name"></h5>');
-      var $closeButton = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+      var $closeButton = $('<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
       var $modalBody = $('<div class="modal-body"></div>');
       var $modalFooter = $('<div class="modal-footer"></div');
-      var $primaryButton = $('<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>');
+      var $primaryButton = $('<button type="button" class="btn btn-primary modal-close" data-dismiss="modal">Close</button>');
 
       // creating elements for displaying content
       var $nameElement = $modalTitle.text(item.name[0].toUpperCase()+item.name.slice(1));
@@ -100,6 +100,11 @@ var pokemonRepository = (function(){
       $modalDialog.append($modalContent);
       $modal.append($modalDialog);
       $modalContainer.append($modal);
+
+      $('.modal-close').click(function() {
+        $('.modal-backdrop').remove();
+        $modalContainer.empty();
+      });
     });
   }
 
@@ -111,12 +116,12 @@ var pokemonRepository = (function(){
     loadList: loadList,
     loadDetails: loadDetails
   };
-
 })();
 
 pokemonRepository.loadList().then(function() {
   $.each(pokemonRepository.getAll(), function(index, pokemon) {
     pokemonRepository.addListItem(pokemon);
+    var $modalContainer = $('#modal-container');
   });
 });
 
@@ -133,9 +138,9 @@ $(document).ready(function(){
 });
 
 // reset content of modal after closing
-$(document).ready(function() {
-  $(".modal").on("hidden.bs.modal", function() {
-    $('.modal-title').empty();
-    $('.modal-body').empty();
-  });
-});
+// $(document).ready(function() {
+//   $(".modal").on("hidden.bs.modal", function() {
+//     $('.modal-title').empty();
+//     $('.modal-body').empty();
+//   });
+// });
