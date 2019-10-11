@@ -61,7 +61,6 @@ var pokemonRepository = (function(){
 
   //showDetails function shows pokemon's details in a modal after clicking on pokemons name
   function showDetails(item) {
-    pokemonRepository.loadDetails(item).then(function() {
       // creating Bootstrap's modal
       var $modalContainer = $('#modal-container');
       var $modal = $('<div class="modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-name" aria-hidden="true">');
@@ -105,7 +104,6 @@ var pokemonRepository = (function(){
         $('.modal-backdrop').remove();
         $modalContainer.empty();
       });
-    });
   }
 
   return {
@@ -120,11 +118,11 @@ var pokemonRepository = (function(){
 
 pokemonRepository.loadList().then(function() {
   $.each(pokemonRepository.getAll(), function(index, pokemon) {
+    pokemonRepository.loadDetails(pokemon);
     pokemonRepository.addListItem(pokemon);
-    // var $modalContainer = $('#modal-container');
   });
-});
-
+  }
+);
 
 
 // function for filter/search pokemon list by name
