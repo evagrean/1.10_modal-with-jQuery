@@ -100,7 +100,7 @@ var pokemonRepository = (function(){
       $modalDialog.append($modalContent);
       $modal.append($modalDialog);
       $modalContainer.append($modal);
-
+      // reset content of modal after closing
       $('.modal-close').click(function() {
         $('.modal-backdrop').remove();
         $modalContainer.empty();
@@ -121,7 +121,7 @@ var pokemonRepository = (function(){
 pokemonRepository.loadList().then(function() {
   $.each(pokemonRepository.getAll(), function(index, pokemon) {
     pokemonRepository.addListItem(pokemon);
-    var $modalContainer = $('#modal-container');
+    // var $modalContainer = $('#modal-container');
   });
 });
 
