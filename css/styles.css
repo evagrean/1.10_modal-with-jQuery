@@ -11,6 +11,10 @@ body {
   color: #2D3657;
 }
 
+.right {
+  padding-right: 0px !important;
+}
+
 h1 {
   color: #2D3657;
   font-weight: bold;
