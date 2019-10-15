@@ -1,6 +1,6 @@
 /* Colors used
 font-color: #2D3657;
-background-color navbar: #dbebf9;
+background-color navbar: #9cd9eb;
 */
 
 
@@ -13,6 +13,13 @@ body {
 
 .right {
   padding-right: 0px !important;
+}
+
+.navbar {
+  background-color: #9cd9eb;
+  -webkit-box-shadow: 0px 8px 45px -14px rgba(178,178,178,1);
+  -moz-box-shadow: 0px 8px 45px -14px rgba(178,178,178,1);
+  box-shadow: 0px 8px 45px -14px rgba(178,178,178,1);
 }
 
 h1 {
