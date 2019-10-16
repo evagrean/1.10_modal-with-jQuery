@@ -80,7 +80,7 @@ var pokemonRepository = (function() {
     var $modalBody = $('<div class="modal-body"></div>');
     var $modalFooter = $('<div class="modal-footer"></div');
     var $primaryButton = $(
-      '<button type="button" class="btn btn-info modal-close" data-dismiss="modal">Close</button>'
+      '<button type="button" class="btn btn-info modal-close modal-close__button" data-dismiss="modal">Close</button>'
     );
 
     // creating elements for displaying content
