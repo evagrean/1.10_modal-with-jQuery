@@ -12,7 +12,7 @@ var pokemonRepository = (function() {
     if (typeof pokemon === 'object') {
       repository.push(pokemon);
     } else {
-      console.log('only objects with predetermined keys can be added!'');
+      console.log('only objects with predetermined keys can be added!');
     }
   }
 
