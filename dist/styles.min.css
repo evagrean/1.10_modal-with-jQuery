@@ -1,0 +1,31 @@
+.list-group-item,
+.modal-dialog,
+body,
+h1 {
+  color: #2d3657;
+}
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  background-color: #fff;
+}
+.right {
+  padding-right: 0 !important;
+}
+.navbar {
+  background-color: #9cd9eb;
+  -webkit-box-shadow: 0 8px 45px -14px rgba(178, 178, 178, 1);
+  -moz-box-shadow: 0 8px 45px -14px rgba(178, 178, 178, 1);
+  box-shadow: 0 8px 45px -14px rgba(178, 178, 178, 1);
+}
+h1 {
+  font-weight: 700;
+  margin-top: 10px;
+}
+.pokemon-list {
+  margin-top: 120px;
+  width: 100%;
+}
+.modal-dialog {
+  text-align: center;
+}
