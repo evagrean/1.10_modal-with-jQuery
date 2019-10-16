@@ -1,6 +1,9 @@
 /* Colors used
 font-color: #2D3657;
 background-color navbar: #9cd9eb;
+background-color hover pokekmon list button: #d9eb9c
+bg-color modal-close button: #eb9cd9;
+hover: #d38cc3;
 */
 
 body {
@@ -36,7 +39,21 @@ h1 {
   color: #2d3657;
 }
 
+.list-group-item:hover {
+  background-color: #d9eb9c;
+}
+
 .modal-dialog {
   color: #2d3657;
   text-align: center;
+}
+
+.modal-close {
+  background-color: #eb9cd9;
+  color: #2d3657;
+}
+
+.modal-close:hover {
+  background-color: #d38cc3;
+  color: #2d3657;
 }
