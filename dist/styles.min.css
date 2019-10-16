@@ -1,5 +1,5 @@
 .list-group-item,
-.modal-close,
+.modal-close__button,
 .modal-dialog,
 body,
 h1 {
@@ -33,10 +33,10 @@ h1 {
 .modal-dialog {
   text-align: center;
 }
-.modal-close {
+.modal-close__button {
   background-color: #eb9cd9;
 }
-.modal-close:hover {
+.modal-close__button:hover {
   background-color: #d38cc3;
   color: #2d3657;
 }
