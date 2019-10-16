@@ -18,7 +18,7 @@ var pokemonRepository = (function() {
 
   // function for fetching data from API - jQuery: ajax()
   function loadList() {
-    return $.ajax(apiUrl, { dataType: {'json'})
+    return $.ajax(apiUrl, { dataType: 'json' })
       .then(function(item) {
         $.each(item.results, function(i, item) {
           var pokemon = {
@@ -89,7 +89,7 @@ var pokemonRepository = (function() {
     );
     var $imageElement = $(
       '<img class="pokemon-img" alt="a picture of current pokemon">'
-    ).attr("src", item.imageUrl);
+    ).attr('src', item.imageUrl);
     var $heightElement = $('<p class="pokemon-height"></p>').text(
       'Height: ' + item.height
     );
